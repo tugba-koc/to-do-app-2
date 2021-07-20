@@ -8,7 +8,7 @@ function App() {
 		<h1>todos</h1>
 		<form>
 			<input class="new-todo" placeholder="What needs to be done?" autofocus />
-		</form>
+		</form> 
 	</header>
 	<section class="main">
 		<input class="toggle-all" type="checkbox" />
