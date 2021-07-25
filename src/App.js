@@ -1,76 +1,50 @@
-import './App.css';
+import "./App.css";
+import React, { useState } from "react";
+import ToDoList from "./components/ToDoList";
+import ToDoForm from "./components/ToDoForm";
+import Filters from "./components/Filters";
 
-function App() { 
+function App() {
+  const [inputText, setInputText] = useState("");
+  const [toDoList, setToDoList] = useState([]);
+  const [checked, setChecked] = useState(false);
+  const [filteredList, setFilteredlist] = useState([]);
+  
+
   return (
     <div className="App">
-     <section class="todoapp">
-	<header class="header">
-		<h1>todos</h1>
-		<form>
-			<input class="new-todo" placeholder="What needs to be done?" autofocus />
-		</form> 
-	</header>
-	<section class="main">
-		<input class="toggle-all" type="checkbox" />
-		<label for="toggle-all">
-			Mark all as complete
-		</label>
+      <section className="todoapp">
+        <header className="header">
+          <h1>todos</h1>
+          <ToDoForm
+            toDoList={toDoList}
+            setToDoList={setToDoList}
+            inputText={inputText}
+            setInputText={setInputText}
+          />
+          <ToDoList
+            filteredList={filteredList}
+            setFilteredlist={setFilteredlist}
+            setChecked={setChecked}
+            checked={checked}
+            toDoList={toDoList}
+            setToDoList={setToDoList}
+          />
+        </header>
 
-		<ul class="todo-list">
-			<li class="completed">
-				<div class="view">
-					<input class="toggle" type="checkbox" />
-					<label>Learn JavaScript</label>
-					<button class="destroy"></button>
-				</div>
-			</li>
-			<li>
-				<div class="view">
-					<input class="toggle" type="checkbox" />
-					<label>Learn React</label>
-					<button class="destroy"></button>
-				</div>
-			</li>
-			<li>
-				<div class="view">
-					<input class="toggle" type="checkbox" />
-					<label>Have a life!</label>
-					<button class="destroy"></button>
-				</div>
-			</li>
-		</ul>
-	</section>
+        <Filters
+          filteredList={filteredList}
+          setFilteredlist={setFilteredlist}
+          checked={checked}
+          setChecked={setChecked}
+          toDoList={toDoList}
+          setToDoList={setToDoList}
+          inputText={inputText}
+          setInputText={setInputText}
+        />
+      </section>
 
-	<footer class="footer">
 
-		<span class="todo-count">
-			<strong>2</strong>
-			items left
-		</span>
-
-		<ul class="filters">
-			<li>
-				<a href="/" class="selected">All</a>
-			</li>
-			<li>
-				<a href="/">Active</a>
-			</li>
-			<li>
-				<a href="/">Completed</a>
-			</li>
-		</ul>
-
-		<button class="clear-completed">
-			Clear completed
-		</button>
-	</footer>
-</section>
-
-<footer class="info">
-	<p>Click to edit a todo</p>
-	<p>Created by <a href="https://d12n.me/">Dmitry Sharabin</a></p>
-	<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
-</footer>
     </div>
   );
 }
