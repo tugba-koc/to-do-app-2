@@ -1,6 +1,6 @@
 [Netlify](https://60fda9037bde70c0deeee56e--to-do-app-tugba-koc.netlify.app/)
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
