@@ -1,5 +1,7 @@
 [Netlify](https://60fda9037bde70c0deeee56e--to-do-app-tugba-koc.netlify.app/)
 
+![To Do App - Google Chrome 2021-07-25 21-04-31](https://user-images.githubusercontent.com/71395416/126909519-beffc9bd-9f46-4aab-af2a-f84474c2f3de.gif)
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
